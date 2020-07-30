@@ -1,11 +1,17 @@
 import React from 'react';
+
+import { Layout } from './components/Layout';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Hello world!
+        <Layout>
+          <div>
+            Hi this is the homepage
+          </div>
+        </Layout>
       </header>
     </div>
   );
