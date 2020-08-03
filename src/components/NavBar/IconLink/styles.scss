@@ -1,0 +1,16 @@
+.icon-link {
+  .displayed-content > * {
+    display: block;
+    margin: auto;
+  }
+
+  .icon {
+    text-align: center;
+    color: black !important;
+  }
+
+  a:hover {
+    text-decoration: unset;
+  }
+
+}

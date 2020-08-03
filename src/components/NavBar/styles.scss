@@ -1,0 +1,13 @@
+.app-navbar {
+  padding: 1rem 0 1rem 0;
+
+  .first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > * {
+      margin: 0.5rem;
+    }
+  }
+}
