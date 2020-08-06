@@ -1,0 +1,13 @@
+.review-stars {
+  color: #d62222;
+
+  .star {
+    display: inline-block;
+  }
+
+  .star.partial {
+    width: 0.6em;
+    overflow-y: hidden;
+    vertical-align: top;
+  }
+}

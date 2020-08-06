@@ -11,4 +11,13 @@
     a:hover {
         color: #e6df53;
     }
+
+    .no-link-styling {
+        color: unset;
+
+        :hover {
+            color: unset;
+            text-decoration: unset;
+        }
+    }
 }

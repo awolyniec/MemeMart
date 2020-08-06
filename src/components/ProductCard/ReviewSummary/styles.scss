@@ -1,0 +1,13 @@
+.review-summary {
+  > * {
+    display: inline-block;
+  }
+
+  > *:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+
+  span {
+    font-size: 0.8em;
+  }
+}
