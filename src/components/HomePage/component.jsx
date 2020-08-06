@@ -3,7 +3,7 @@ import React from 'react';
 import { pathToPublicFile } from '../../utils';
 
 import './styles.scss';
-import ProductCard from '../ProductCard/component';
+import { ProductCardList } from '../ProductCardList';
 
 const tallProductCardProps = {
     imageUrl: pathToPublicFile("/images/Merchandise/meme.jpeg"),
@@ -37,10 +37,11 @@ const HomePage = () => {
                         alt=""
                     />
                 </div>
-                <div style={{width: '314px'}}>
-                    <ProductCard
-                        {...wideProductCardProps}
-                    />
+                <div className="container">
+                    <div className="header-container">
+                        <h1>FEATURED PRODUCTS</h1>
+                    </div>
+                    <ProductCardList data={[tallProductCardProps, tallProductCardProps, wideProductCardProps, wideProductCardProps]} />
                 </div>
             </div>
         </div>

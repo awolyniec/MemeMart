@@ -37,19 +37,23 @@ const ProductCard = ({
         )}
       </div>
       <div className="product-card-body">
-        <Link to={productUrl}>
-          <b>{name}</b>
-        </Link>
-        <span>
-          {rarity}
-        </span>
-        <ReviewSummary
-          stars={stars}
-          nReviews={nReviews}
-        />
-        <b>
-          {displayPrice(price)}
-        </b>
+        <div className="name-and-rarity">
+          <Link to={productUrl}>
+            <b>{name}</b>
+          </Link>
+          <span>
+            {rarity}
+          </span>
+        </div>
+        <div className="bottom-content">
+          <ReviewSummary
+            stars={stars}
+            nReviews={nReviews}
+          />
+          <b>
+            {displayPrice(price)}
+          </b>
+        </div>
       </div>
     </div>
   );

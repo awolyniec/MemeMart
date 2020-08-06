@@ -1,0 +1,16 @@
+.product-card-list {
+  display: flex;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .list-item {
+    width: 25%;
+    padding: 0.5rem;
+
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+  }
+}

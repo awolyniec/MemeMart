@@ -1,4 +1,5 @@
 .product-card {
+  height: 100%;
   background-color: white;
   padding: 1rem;
 
@@ -29,7 +30,8 @@
       color: white;
       border-radius: 0;
       padding: 11.5px 10px;
-  
+      font-size: 0.6875rem;
+
       @media only screen and (min-width: 768px) {
         width: 50%;
       }
@@ -38,10 +40,15 @@
 
   .product-card-body {
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     > * {
-      display: block;
-      margin-bottom: 0.5rem;
+      > * {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
     }
   }
 
