@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { IconLinkList } from './IconLinkList'
 
@@ -25,11 +26,13 @@ const NavBar = () => {
         <div className="app-navbar">
             <div className="container">
                 <div className="first-row">
-                    <img
-                        src={process.env.PUBLIC_URL + "/doge192.png"}
-                        alt=""
-                        height={64}
-                    />
+                    <Link to="/">
+                        <img
+                            src={process.env.PUBLIC_URL + "/logo.jpg"}
+                            alt=""
+                            height={80}
+                        />
+                    </Link>
                     <IconLinkList data={iconLinkData} />
                 </div>
             </div>
