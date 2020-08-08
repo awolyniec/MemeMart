@@ -41,7 +41,7 @@ const HomePage = () => {
                     <div className="header-container">
                         <h1>FEATURED PRODUCTS</h1>
                     </div>
-                    <ProductCardList data={[tallProductCardProps, tallProductCardProps, wideProductCardProps, wideProductCardProps]} />
+                    <ProductCardList data={[tallProductCardProps, wideProductCardProps]} />
                 </div>
             </div>
         </div>
