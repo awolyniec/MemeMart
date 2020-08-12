@@ -6,15 +6,21 @@ import { bulkReviewsByProductId } from '../../services';
 
 export function* fetchReviewsByProductIdAsync({ payload: productIds }) {
   try {
-    const data = yield bulkReviewsByProductId(productIds);
-    yield put(setReviewsByProductId(data));
+    const reviews = yield bulkReviewsByProductId(productIds);
+    const reviewsByProductId = {};
+    for (let review of reviews) {
+      const { productId } = review;
+      reviewsByProductId[productId] = reviewsByProductId[productId] || [];
+      reviewsByProductId[productId].push(review);
+    }
+    yield put(setReviewsByProductId(reviewsByProductId));
   } catch (error) {
     yield put(setError(error));
   }
 }
 
 export function* onFetchReviewsByProductId() {
-  yield takeLatest(types.FETCH_FEATURED_PRODUCTS, fetchReviewsByProductIdAsync);
+  yield takeLatest(types.FETCH_REVIEWS_BY_PRODUCT_ID, fetchReviewsByProductIdAsync);
 }
 
 export function* reviewSagas() {

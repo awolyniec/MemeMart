@@ -6,6 +6,6 @@ import { reviewSagas } from './reviews/sagas';
 export default function* rootSaga() {
   yield all([
     call(productSagas),
-    // call(reviewSagas)
+    call(reviewSagas)
   ]);
 }

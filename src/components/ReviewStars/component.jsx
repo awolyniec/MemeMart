@@ -11,7 +11,7 @@ const ReviewStars = ({ stars }) => {
   const starElements = [];
   for (let i = 0; i < wholeOrPartialStars; i++) {
     starElements.push(
-      <div className={classnames("star", {
+      <div key={`star-${i}`} className={classnames("star", {
         partial: (i === wholeOrPartialStars - 1) && hasPartialStar
       })}>
         <i className="fas fa-pepper-hot" />

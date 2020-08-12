@@ -7,9 +7,9 @@ import './styles.scss';
 const ProductCardList = ({ data }) => {
   return (
     <div className="product-card-list">
-      {data.map((productCardProps) => {
+      {data.map((productCardProps, index) => {
         return (
-          <div className="list-item">
+          <div className="list-item" key={`product-card-${index}`}>
             <ProductCard {...productCardProps} />
           </div>
         );
