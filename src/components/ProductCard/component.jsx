@@ -46,11 +46,13 @@ const ProductCard = ({
         <span>
           {rarity}
         </span>
-        {nReviews && (
+        {nReviews ? (
           <ReviewSummary
             stars={stars}
             nReviews={nReviews}
           />
+        ) : (
+          <div className="review-summary-placeholder" />
         )}
         <span className="text-bold">
           {displayPrice(price)}
