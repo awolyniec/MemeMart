@@ -45,10 +45,12 @@ const ProductCard = ({
         <span>
           {rarity}
         </span>
-        <ReviewSummary
-          stars={stars}
-          nReviews={nReviews}
-        />
+        {nReviews && (
+          <ReviewSummary
+            stars={stars}
+            nReviews={nReviews}
+          />
+        )}
         <span className="text-bold">
           {displayPrice(price)}
         </span>

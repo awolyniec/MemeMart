@@ -1,0 +1,70 @@
+{
+  "memes": [
+    {
+      "_id": "productId1",
+      "name": "It's All Tendies",
+      "imageUrl": "images/Merchandise/0a8.jpg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Common"
+    },
+    {
+      "_id": "productId2",
+      "name": "Buff Doge - Dogs Then vs. Now",
+      "imageUrl": "images/Merchandise/2be.png",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Common"
+    },
+    {
+      "_id": "productId3",
+      "name": "It's All Jeb",
+      "imageUrl": "images/Merchandise/6d0.jpg",
+      "price": 199,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Rare"
+    },
+    {
+      "_id": "productId4",
+      "name": "Laughing Jerry Pokemon Trainer",
+      "imageUrl": "images/Merchandise/7ux0uk3llrc51.jpg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    }
+  ],
+
+  "reviews": [
+    {
+      "_id": "reviewId1",
+      "productId": "productId4",
+      "stars": 4,
+      "title": "Yeah a pretty decent meme",
+      "user": "Jeremy Clarkson",
+      "text": "If you grew up with Pokemon, you had a good childhood.",
+      "createdAt": "2020-01-01T06:00:00.000Z"
+    },
+    {
+      "_id": "reviewId2",
+      "productId": "productId3",
+      "stars": 5,
+      "title": "5 stars for Jeb!",
+      "user": "Jeremy Clarkson",
+      "text": "Jeb!",
+      "createdAt": "2020-01-01T06:00:00.000Z"
+    },
+    {
+      "_id": "reviewId3",
+      "productId": "productId5",
+      "stars": 5,
+      "title": "Uhhhh...",
+      "user": "Richard Hammond",
+      "text": "Uhhhh....!",
+      "createdAt": "2020-01-01T06:00:00.000Z"
+    }
+  ]
+}

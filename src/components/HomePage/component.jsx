@@ -1,32 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { fetchFeaturedProducts } from '../../redux/products/actions';
+import { selectFeaturedProducts } from '../../redux/products/selectors';
 import { pathToPublicFile } from '../../utils';
 
 import './styles.scss';
 import { ProductCardList } from '../ProductCardList';
 
-const tallProductCardProps = {
-    imageUrl: pathToPublicFile("/images/Merchandise/meme.jpeg"),
-    productUrl: '/shop/exampleProductId1',
-    name: 'Legendary Arrested for Everything',
-    price: 199,
-    rarity: 'Uncommon',
-    stars: 5,
-    nReviews: 112,
-    isBestseller: true
-};
-
-const wideProductCardProps = {
-    imageUrl: pathToPublicFile("/images/Merchandise/buff-doge-grandpa.jpg"),
-    productUrl: '/shop/exampleProductId2',
-    name: 'Buff Doge Grandpa',
-    price: 299,
-    rarity: 'Uncommon',
-    stars: 4.547,
-    nReviews: 23
-};
-
 const HomePage = () => {
+    const dispatch = useDispatch();
+    const featuredProducts = useSelector(selectFeaturedProducts);
+
+    useEffect(() => {
+        dispatch(fetchFeaturedProducts());
+    }, [dispatch]);
+
+    // TODO: get reviews
+    // TODO: will the effect run every time the redux state is updated, because there is a new state object?
+
     return (
         <div className="home-page">
             <div className="container-fluid">
@@ -41,7 +33,7 @@ const HomePage = () => {
                     <div className="header-container">
                         <h1>FEATURED PRODUCTS</h1>
                     </div>
-                    <ProductCardList data={[tallProductCardProps, wideProductCardProps]} />
+                    <ProductCardList data={featuredProducts} />
                 </div>
             </div>
         </div>
