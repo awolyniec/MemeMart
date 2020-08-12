@@ -9,7 +9,7 @@ const ProductCardList = ({ data }) => {
     <div className="product-card-list">
       {data.map((productCardProps, index) => {
         return (
-          <div className="list-item" key={`product-card-${index}`}>
+          <div className="list-item" key={`product-card-${productCardProps.productId}`}>
             <ProductCard {...productCardProps} />
           </div>
         );

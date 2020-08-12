@@ -8,9 +8,9 @@ const IconLinkList = ({ data }) => {
 
   return (
     <div className="icon-link-list">
-      {data.map((iconLinkProps) => {
+      {data.map((iconLinkProps, index) => {
         return (
-          <div className="icon-link-container">
+          <div className="icon-link-container" key={`icon-link-${index}`}>
             <IconLink {...iconLinkProps} />
           </div>
         );

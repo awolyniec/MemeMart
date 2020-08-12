@@ -20,7 +20,6 @@ const HomePage = () => {
         dispatch(fetchFeaturedProducts());
     }, [dispatch]);
 
-    // TODO: get reviews
     // TODO: will the effect run every time the redux state is updated, because there is a new state object?
     useEffect(() => {
         const featuredProductIds = featuredProducts.map(product => product._id);
@@ -28,7 +27,23 @@ const HomePage = () => {
     }, [dispatch, featuredProducts]);
 
     const featuredProductsData = featuredProducts.map(product => {
-        const productData = Object.assign({}, product);
+        const {
+            _id,
+            imageUrl,
+            name,
+            price,
+            rarity,
+            isBestseller
+        } = product;
+        const productData = Object.assign({}, {
+            productId: _id,
+            imageUrl,
+            name,
+            price,
+            rarity,
+            isBestseller,
+            productUrl: `/products/${_id}`
+        });
         const reviewsForProduct = reviewsByProductId[product._id];
         if (!reviewsForProduct) {
             return productData;

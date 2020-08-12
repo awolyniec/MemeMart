@@ -7,6 +7,7 @@ import { ReviewSummary } from './ReviewSummary';
 import './styles.scss';
 
 const ProductCard = ({
+  productId,
   imageUrl,
   productUrl,
   name,
