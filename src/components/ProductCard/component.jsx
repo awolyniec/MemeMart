@@ -36,9 +36,9 @@ const ProductCard = ({
           </div>
         )}
       </div>
-      <div className="product-name">
+      <div className="product-name text-bold">
         <Link to={productUrl}>
-          <b>{name}</b>
+          <span>{name}</span>
         </Link>
       </div>
       <div className="bottom-content">
@@ -49,9 +49,9 @@ const ProductCard = ({
           stars={stars}
           nReviews={nReviews}
         />
-        <b>
+        <span className="text-bold">
           {displayPrice(price)}
-        </b>
+        </span>
       </div>
     </div>
   );

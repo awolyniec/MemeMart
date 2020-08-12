@@ -1,7 +1,6 @@
 .icon-link {
   .displayed-content > * {
     display: block;
-    margin: auto;
   }
 
   .icon {
@@ -13,4 +12,7 @@
     text-decoration: unset;
   }
 
+  span {
+    margin-top: 0.25rem !important;
+  }
 }
