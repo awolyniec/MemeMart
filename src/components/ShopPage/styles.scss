@@ -1,3 +1,10 @@
 .shop-page {
-  
+  .header-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-card-list-container {
+    margin: 0 15px 0 15px;
+  }
 }

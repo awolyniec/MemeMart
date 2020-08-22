@@ -1,4 +1,3 @@
-import * as _ from 'lodash';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -8,6 +7,7 @@ import { fetchReviewsByProductId } from '../../redux/reviews/actions';
 import { selectReviewsByProductId } from '../../redux/reviews/selectors';
 import { pathToPublicFile } from '../../utils';
 import { ProductCardList } from '../ProductCardList';
+import { getProductCardProps } from '../ProductCard';
 
 import './styles.scss';
 
@@ -26,31 +26,7 @@ const HomePage = () => {
         dispatch(fetchReviewsByProductId(featuredProductIds));
     }, [dispatch, featuredProducts]);
 
-    const featuredProductsData = featuredProducts.map(product => {
-        const {
-            _id,
-            imageUrl,
-            name,
-            price,
-            rarity,
-            isBestseller
-        } = product;
-        const productData = Object.assign({}, {
-            productId: _id,
-            imageUrl,
-            name,
-            price,
-            rarity,
-            isBestseller,
-            productUrl: `/products/${_id}`
-        });
-        const reviewsForProduct = reviewsByProductId[product._id];
-        if (!reviewsForProduct) {
-            return productData;
-        }
-        const stars = _.sumBy(reviewsForProduct, ({ stars }) => stars);
-        return Object.assign(productData, { stars, nReviews: reviewsForProduct.length });
-    });
+    const featuredProductsData = featuredProducts.map(product => getProductCardProps(product, reviewsByProductId));
 
     return (
         <div className="home-page">
@@ -62,7 +38,7 @@ const HomePage = () => {
                 />
             </div>
             <div className="header-container">
-                <h1>FEATURED PRODUCTS</h1>
+                <h1 className="product-cards-header">FEATURED PRODUCTS</h1>
             </div>
             <div className="product-card-list-container">
                 <ProductCardList data={featuredProductsData} />

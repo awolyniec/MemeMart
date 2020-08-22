@@ -37,7 +37,7 @@ const ProductCard = ({
           </div>
         )}
       </div>
-      <div className="product-name text-bold">
+      <div className="product-name fw-700">
         <Link to={productUrl}>
           <span>{name}</span>
         </Link>
