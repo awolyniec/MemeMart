@@ -54,7 +54,7 @@ const ProductCard = ({
         ) : (
           <div className="review-summary-placeholder" />
         )}
-        <span className="text-bold">
+        <span className="fw-700">
           {displayPrice(price)}
         </span>
       </div>

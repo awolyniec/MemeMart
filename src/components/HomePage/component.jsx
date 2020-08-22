@@ -7,9 +7,9 @@ import { selectFeaturedProducts } from '../../redux/products/selectors';
 import { fetchReviewsByProductId } from '../../redux/reviews/actions';
 import { selectReviewsByProductId } from '../../redux/reviews/selectors';
 import { pathToPublicFile } from '../../utils';
+import { ProductCardList } from '../ProductCardList';
 
 import './styles.scss';
-import { ProductCardList } from '../ProductCardList';
 
 const HomePage = () => {
     const dispatch = useDispatch();
@@ -54,20 +54,18 @@ const HomePage = () => {
 
     return (
         <div className="home-page">
-            <div className="container-fluid">
-                <div className="image-container">
-                    <img
-                        className="page-preview-image img-fluid"
-                        src={pathToPublicFile("/images/mememart.jpg")}
-                        alt=""
-                    />
-                </div>
-                <div className="container">
-                    <div className="header-container">
-                        <h1>FEATURED PRODUCTS</h1>
-                    </div>
-                    <ProductCardList data={featuredProductsData} />
-                </div>
+            <div className="image-container">
+                <img
+                    className="page-preview-image img-fluid"
+                    src={pathToPublicFile("/images/mememart.jpg")}
+                    alt=""
+                />
+            </div>
+            <div className="header-container">
+                <h1>FEATURED PRODUCTS</h1>
+            </div>
+            <div className="product-card-list-container">
+                <ProductCardList data={featuredProductsData} />
             </div>
         </div>
     );

@@ -2,11 +2,15 @@ import React from 'react';
 
 import { NavBar } from '../NavBar';
 
+import './styles.scss';
+
 const Layout = ({ children }) => {
     return (
         <div className="layout">
             <NavBar />
-            {children}
+            <div className="page-container">
+                {children}
+            </div>
         </div>
     );
 };
