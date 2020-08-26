@@ -7,7 +7,8 @@
       "price": 99,
       "createdAt": "2020-01-01T06:00:00.000Z",
       "onSale": true,
-      "rarity": "Common"
+      "rarity": "Common",
+      "isBestseller": true
     },
     {
       "_id": "productId2",
@@ -31,6 +32,123 @@
       "_id": "productId4",
       "name": "Laughing Jerry Pokemon Trainer",
       "imageUrl": "images/Merchandise/7ux0uk3llrc51.jpg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    },
+    {
+      "_id": "productId5",
+      "name": "Buff Doge Can't Draw",
+      "imageUrl": "images/Merchandise/53a.png",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    },
+    {
+      "_id": "productId6",
+      "name": "Where's The Change",
+      "imageUrl": "images/Merchandise/418.jpg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    },
+    {
+      "_id": "productId7",
+      "name": "Always Has Been - Death Star",
+      "imageUrl": "images/Merchandise/ac8.jpg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    },
+    {
+      "_id": "productId8",
+      "name": "Always Has Been - Kirby",
+      "imageUrl": "images/Merchandise/bbe.png",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    },
+    {
+      "_id": "productId9",
+      "name": "Buff Doge Grandpa",
+      "imageUrl": "images/Merchandise/buff-doge-grandpa.jpg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    },
+    {
+      "_id": "productId10",
+      "name": "Buff Doge Plants",
+      "imageUrl": "images/Merchandise/c62.jpg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    },
+    {
+      "_id": "productId11",
+      "name": "Cat Proud of Self",
+      "imageUrl": "images/Merchandise/cat-meme-joke-1.jpg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    },
+    {
+      "_id": "productId12",
+      "name": "Cat Blame Dog",
+      "imageUrl": "images/Merchandise/cat-memes-lede-1300x890.jpg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    },
+    {
+      "_id": "productId13",
+      "name": "Microsoft Word Squiggly",
+      "imageUrl": "images/Merchandise/e45.jpg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Rare"
+    },
+    {
+      "_id": "productId14",
+      "name": "Hovercat",
+      "imageUrl": "images/Merchandise/lede-cat-memes.jpg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    },
+    {
+      "_id": "productId15",
+      "name": "Man Arrested for Everything",
+      "imageUrl": "images/Merchandise/meme.jpeg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    },
+    {
+      "_id": "productId16",
+      "name": "Patrick For President",
+      "imageUrl": "images/Merchandise/patrick4prez.jpg",
+      "price": 99,
+      "createdAt": "2020-01-01T06:00:00.000Z",
+      "onSale": true,
+      "rarity": "Uncommon"
+    },
+    {
+      "_id": "productId17",
+      "name": "Attempt Made",
+      "imageUrl": "images/Merchandise/the-attempt.jpg",
       "price": 99,
       "createdAt": "2020-01-01T06:00:00.000Z",
       "onSale": true,

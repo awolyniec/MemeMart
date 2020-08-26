@@ -3,7 +3,7 @@ import { pathToPublicFile } from '../utils';
 
 export const getFeaturedProducts = async () => {
   const featuredMemes = merchandise.memes
-    .slice(0, 5)
+    .slice(0, 4)
     .map(({ imageUrl, ...rest }) => ({
       imageUrl: pathToPublicFile(imageUrl),
       ...rest
