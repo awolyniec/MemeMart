@@ -1,19 +1,28 @@
-import merchandise from '../data/merchandise.json';
+import axios from 'axios';
+
+import { routes } from '@awolyniec/mm-util';
+import { url, path } from '@awolyniec/mm-util/utils';
+
 import { pathToPublicFile } from '../utils';
 
 export const getFeaturedProducts = async () => {
-  const featuredMemes = merchandise.memes
+  const { data: dbProducts } = await axios.get(
+    url('http', 'mmQuery', routes.mmQuery.products.featured)
+  );
+  return dbProducts
     .slice(0, 4)
     .map(({ imageUrl, ...rest }) => ({
       imageUrl: pathToPublicFile(imageUrl),
       ...rest
     }));
-
-  return featuredMemes;
 };
 
 export const getProducts = async () => {
-  return merchandise.memes
+  const { data: dbProducts } = await axios.get(
+    url('http', 'mmQuery', routes.mmQuery.products.search)
+  );
+
+  return dbProducts
     .map(({ imageUrl, ...rest }) => ({
       imageUrl: pathToPublicFile(imageUrl),
       ...rest
@@ -21,10 +30,8 @@ export const getProducts = async () => {
 };
 
 export const bulkReviewsByProductId = async (productIds) => {
-  const productIdsMap = {};
-  for (let productId of productIds) {
-    productIdsMap[productId] = true;
-  }
-  const reviewsForProducts = merchandise.reviews.filter(({ productId }) => productIdsMap[productId]);
-  return reviewsForProducts;
+  const { data: reviews } = await axios.get(
+    url('http', 'mmQuery', path(routes.mmQuery.reviews.bulkByProductId, { productIds }))
+  );
+  return reviews;
 };
