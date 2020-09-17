@@ -28,6 +28,7 @@
     "elliptic": "^6.5.3",
     "http-proxy": "^1.18.1",
     "node-forge": "^0.10.0",
+    "react-scripts/webpack/terser-webpack-plugin": "^1.4.5",
     "selfsigned": "^1.10.8",
     "websocket-extensions": "^0.1.4"
   },
