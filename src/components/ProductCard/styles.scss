@@ -1,5 +1,4 @@
 .product-card {
-  min-height: 470px;
   background-color: white;
   padding: 1rem;
   position: relative;
@@ -40,13 +39,11 @@
   }
 
   .product-name {
-    margin-top: 1rem;
+    margin: 1rem 0 1rem 0;
+    height: 4em;
   }
 
   .bottom-content {
-    position: absolute;
-    bottom: calc(1rem + 20px);
-
     > * {
       display: block;
       margin-bottom: 0.5rem;
